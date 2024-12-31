@@ -18,11 +18,13 @@ then # not installed
         echo "installing mysql ..failure"
         exit 1
     else
-        echo stalling mysql .. success"
+        echo "intalling mysql .. success"
     fi
 else 
     echo "mysql is already .. installed"
 fi
+
+
 
 dnf list installed git
 
