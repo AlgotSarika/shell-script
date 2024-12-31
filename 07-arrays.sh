@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Books=("Rich dad & poor dad","How to talk to anyone","atomic habits")
+Books=("Richdadandpoordad","Howtotalktoanyone","atomichabits")
 #index starts from 0, size is 3
 
 echo "first book: ${Books[0]}"
