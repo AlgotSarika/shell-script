@@ -1,10 +1,10 @@
 #!/bin/bash
 
-NUMBER=$1
+Number=$1
 
 # -gt, -lt. -eq, -ge, -le
 
-if [ $NUMBER -gt 200 ]
+if [ $Number -gt 200 ]
 then
     echo "given number is greater than 200"
 else
