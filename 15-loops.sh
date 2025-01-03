@@ -26,19 +26,18 @@ echo "script strated executing at : $TIMESTAMP" &>>$LOG_FILE_NAME
 
 if [ $USERID -ne 0 ]
 then 
-   echo "ERROR:: you must have sudo access to execute this script"
-   exit 1 #other then  0
+     echo "ERROR:: you must have sudo access to execute this script"
+     exit 1 #other then  0
 fi
 
 for package in $@
-do 
+do
     dnf list installed $package &>>$LOG_FILE_NAME
-    if[$? -ne 0 ]
+    if [$? -ne 0 ]
     then
-        dnf install $package -y &>>$LOG_FILE_NAME
+        dnf install $package -y &>>LOG_FILE_NAME
         VALIDATE $? "Installing $package"
     else
-        echo -e "$package is already $Y ... INSTALLED $N"
+        echo -e "$package is already $Y ... Installed $N"
     fi
 done
-
