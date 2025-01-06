@@ -54,8 +54,6 @@ echo "script strated executing at : $TIMESTAMP" &>>$LOG_FILE_NAME
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-echo "Files are: $FILES"
-
 if [ -n "$FILES" ] # true if there are files to zip
 then
     echo "Files are: $FILES"
