@@ -5,5 +5,6 @@
  source ./23-script-2.sh
 
  echo "Hello from:$MSG"
+ echo "A value: $A"
 
  sh 23-script-2.sh
