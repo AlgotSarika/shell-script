@@ -5,8 +5,8 @@ DISK_THRESHOLD=5 #real projects will monitor for 70
 
 while read -r line
 do
-    USAGE=$(echo $line | awk -F " " '{print $6F}')
+    USAGE=$(echo $line | awk -F " " '{print $6F}' |cut -d "%" -f1)
     PARTITION=$(echo $line | awk -F " " '{print $NF}')
     echo "partition:$PARTITION, usage: $USAGE"
-    
+
 done <<< $DISK_USAGE
